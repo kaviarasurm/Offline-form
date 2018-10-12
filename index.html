@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Offline Form Test</title>
+    <!-- Mobile Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <article id="main">
+
+        <section class="container">
+            <form id="offlineKana" method="post" name="offlineKana" autocomplete="off">
+                <input name="hasRecap" value="false" type="hidden">
+                <input name="isFullScreen" value="false" type="hidden">
+                <input name="isThankYouPage" value="true" type="hidden">
+                <input type="hidden" id="_paramOrder" name="_paramOrder" value="subject,customerid" />
+                <input type="hidden" id="_paramAlias" name="_paramAlias" value="Subject,Name" />
+                <input type="hidden" id="subject" name="subject" value="Test Offline">
+                <input name="secure" value="false" type="hidden">
+                <script type="text/javascript" src="js/commonkana.js"></script>
+                <div class="form-group">
+                    <input class="input" type="text" name="first-name" id="first-name" maxlength="75" autocorrect placeholder="Enter Firstname" />
+                    <input type="hidden" data-alise="First Name" id="Qn1" name="Qn1" data-role="mandy">
+                </div>
+                <div class="form-group">
+                    <input class="input" type="text" name="last-name" id="last-name" maxlength="75" autocorrect placeholder="Enter Lastname" />
+                    <input type="hidden" data-alise="Last Name" id="Qn2" name="Qn2" data-role="mandy">
+                </div>
+                <button type="submit" id="submit" class="oneup">Submit</button>
+            </form>
+            <p>Locally stored items:
+                <span id="local-count">0</span>
+            </p>
+        </section>
+
+        <footer>
+            <p>You are working:
+                <span id="status" class="offline">Offline</span>
+            </p>
+        </footer>
+    </article>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
